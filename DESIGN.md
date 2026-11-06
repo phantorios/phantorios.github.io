@@ -43,8 +43,10 @@ not in mono.
 
 ## Colour
 
-Four complete palettes, not one light and one dark. The page carries no photography,
-so the ground itself has to do the work that images would otherwise do: the paper is
+Four complete palettes, not one light and one dark. The page carries no stock
+photography; the only images are screenshots of the owner's shipped front ends
+(evidence, not mood) and one hand-drawn SVG behind the hero. The ground itself
+still does the work that images would otherwise do: the paper is
 tinted, not white, and the dark scheme is a cold ground with warm text rather than
 terminal black (R-29: two or three core values plus one accent, per palette).
 
@@ -117,4 +119,6 @@ Deliberately excluded, with the rule that excludes each:
 | No résumé preview image | Honest placeholder avoided; the PDF is the artefact, linked directly. |
 | Three palettes instead of one light/dark pair | With no photography on the page, the ground has to carry the identity. A near-white or pure black page left nothing to look at, so there are moods of the same document: ecru paper, porcelain slate, cold ink. |
 | Slate leans neutral dark blue; a violet palette joined later (owner request) | The original slate drifted teal; it now reads as a neutral-to-dark blue with every supporting token (muted, rule, wash) tinted toward the accent hue. Purple was built from the same five-token shape, so each theme stays one hue plus neutrals. |
+| Work entries carry real product screenshots, except the platform in progress | The shipped front end is the artefact a visitor can judge, so the screenshot is evidence, not decoration (R-38). The AKS platform has no honest screenshot while it is in progress, so it gets none. |
+| Hero illustration is a hand-drawn inline SVG tinted by palette tokens | Owner asked for depth behind the lede (reference: mediainovasi.id, arknights.global). R-22 refuses stock blob illustration, so the motif is drawn by hand: a deployment topology over ground contours, stroked from the same tokens as the page. It adds zero network requests, follows all four palettes, sits static, and fades toward the text to keep the lede's contrast. |
 | Headline wipes in once | The single entrance MOTION 2 allows. It names the focal point and the staggered rise sets reading order. Removed entirely, including the clip, under reduced motion. |

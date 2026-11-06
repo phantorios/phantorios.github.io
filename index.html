@@ -142,7 +142,9 @@
     .nav-links a:last-child{border-bottom:none}
   }
   /* ---------- Hero ---------- */
-  .hero{padding:92px 0 68px; border-bottom:1px solid var(--rule)}
+  .hero{position:relative; padding:92px 0 68px; border-bottom:1px solid var(--rule); overflow:hidden}
+  .hero-art{position:absolute; inset:0; width:100%; height:100%; z-index:0; pointer-events:none}
+  .hero .shell{position:relative; z-index:1}
   .hero h1{
     font-family:'Archivo',sans-serif; font-weight:800;
     font-size:clamp(2.5rem,7.4vw,4.5rem); line-height:.98; letter-spacing:-.035em;
@@ -229,6 +231,13 @@
   .minor{margin-top:44px; padding-top:36px; border-top:1px solid var(--rule)}
   .minor h3{font-family:'Archivo',sans-serif; font-weight:800; font-size:1.22rem; letter-spacing:-.02em; margin-bottom:12px}
   .minor p{max-width:40em; margin-bottom:14px}
+  .minor img{
+    display:block; width:100%; height:auto; margin:2px 0 16px;
+    border:1px solid var(--rule); border-radius:3px; background:var(--paper);
+  }
+  @media (max-width:720px){
+    .hero-art{opacity:.45}
+  }
 
   .more{margin-top:40px; padding-top:32px; border-top:1px solid var(--rule)}
   .more h3{font-family:'Archivo',sans-serif; font-weight:800; font-size:1rem; margin-bottom:14px}
@@ -319,6 +328,38 @@
 
 <main id="main">
   <div class="hero" id="top">
+    <svg class="hero-art" aria-hidden="true" focusable="false" viewBox="0 0 1200 520" preserveAspectRatio="xMaxYMid slice">
+      <!-- Hand-drawn infrastructure motif: deployment topology + ground contours.
+           Tinted entirely from palette tokens, so it follows all four themes. -->
+      <defs>
+        <linearGradient id="heroFade" x1="0" y1="0" x2="1" y2="0">
+          <stop offset="0" style="stop-color:var(--paper);stop-opacity:1"/>
+          <stop offset="0.45" style="stop-color:var(--paper);stop-opacity:0.75"/>
+          <stop offset="1" style="stop-color:var(--paper);stop-opacity:0"/>
+        </linearGradient>
+      </defs>
+      <g fill="none" stroke-width="1.4">
+        <!-- ground contours, bottom right -->
+        <path style="stroke:var(--rule)" d="M980 520c0-70 60-96 60-170s-84-88-84-160"/>
+        <path style="stroke:var(--rule)" d="M1060 520c0-96 78-130 78-216s-96-100-96-176"/>
+        <path style="stroke:var(--rule)" d="M1140 520c0-120 96-164 96-262"/>
+        <!-- topology: nodes and edges -->
+        <path style="stroke:var(--muted);opacity:.55" d="M760 210h130l70 62h150"/>
+        <path style="stroke:var(--muted);opacity:.55" d="M890 210l-60 120h130"/>
+        <path style="stroke:var(--muted);opacity:.55" d="M960 330l100-58h80"/>
+        <path style="stroke:var(--accent);opacity:.5" stroke-dasharray="5 7" d="M890 210l70-96h150"/>
+      </g>
+      <g>
+        <circle cx="760" cy="210" r="7" style="fill:var(--accent);opacity:.55"/>
+        <circle cx="890" cy="210" r="9" style="fill:var(--wash);stroke:var(--ink);stroke-width:1.4"/>
+        <circle cx="960" cy="330" r="7" style="fill:var(--wash);stroke:var(--muted);stroke-width:1.4"/>
+        <circle cx="1060" cy="272" r="9" style="fill:var(--wash);stroke:var(--muted);stroke-width:1.4"/>
+        <circle cx="1110" cy="114" r="7" style="fill:var(--accent);opacity:.5"/>
+        <circle cx="1110" cy="330" r="7" style="fill:var(--wash);stroke:var(--muted);stroke-width:1.4"/>
+      </g>
+      <!-- fade toward the text so the lede keeps its contrast -->
+      <rect x="0" y="0" width="720" height="520" fill="url(#heroFade)"/>
+    </svg>
     <div class="shell">
       <h1>Anthony Setiawan</h1>
       <p class="hero-lede">Fullstack developer and cloud engineer. I build enterprise web platforms, SaaS products and delivery pipelines, and I take them from a first commit to running in production.</p>
@@ -359,6 +400,7 @@
 
         <article class="minor">
           <h3>Idle RPG prototype</h3>
+          <img src="/assets/work-idle-rpg.jpg" alt="Front end of the idle RPG: stage counter, a slime enemy with a health bar, and the upgrade shop" width="434" height="780" loading="lazy" decoding="async" style="max-width:434px">
           <p>A playable idle RPG in one dependency-free HTML file: tap combat, exponential upgrade costs, boss progression, and a live panel for tuning the growth curves. Written to find where the economy stops being fun.</p>
           <p class="stack mono">Vanilla JavaScript · HTML5 · GitHub Pages</p>
           <p class="links">
@@ -369,6 +411,7 @@
 
         <article class="minor">
           <h3>Is This Cheating? quiz</h3>
+          <img src="/assets/work-quiz.jpg" alt="Front end of the Is This Cheating? quiz: three questions answered with three different answer chips" width="680" height="780" loading="lazy" decoding="async">
           <p>A hobby project that doubles as a working reference for my front-end stack: an unofficial English version of the Japanese "is this cheating?" judgment sheet (original by Sukoya Kana, credited on the site). 40 questions in 7 languages, results exported in the browser as a PDF or a share card, one static build deployed by GitHub Actions with no backend.</p>
           <p class="stack mono">React · TypeScript · Vite · Tailwind CSS · jsPDF · GitHub Actions</p>
           <p class="links">
