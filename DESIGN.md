@@ -43,30 +43,30 @@ not in mono.
 
 ## Colour
 
-Three complete palettes, not one light and one dark. The page carries no photography,
+Four complete palettes, not one light and one dark. The page carries no photography,
 so the ground itself has to do the work that images would otherwise do: the paper is
 tinted, not white, and the dark scheme is a cold ground with warm text rather than
 terminal black (R-29: two or three core values plus one accent, per palette).
 
-| Token | Paper | Slate | Ink | Use |
-| --- | --- | --- | --- | --- |
-| paper | `#F4EEE2` | `#E9EEF1` | `#0C1113` | Page ground. Ecru, porcelain, cold ink. |
-| ink | `#1A1611` | `#0E1A22` | `#EDE6D9` | Body and display text. |
-| muted | `#5C5245` | `#4A5C68` | `#99A3A6` | Secondary text and metadata. |
-| rule | `#DCD2BF` | `#CBD7DE` | `#232C30` | Hairlines and field borders. |
-| wash | `#EDE4D3` | `#DFE7EC` | `#121A1D` | Margin band, inputs, status label. A tint of the ground, not a new hue. |
-| accent | `#A83E12` | `#0B5C8A` | `#FF8C5A` | One accent per palette: primary action, current role, focus ring, link hover. |
-| on-accent | `#FFFFFF` | `#FFFFFF` | `#0C1113` | Label colour on an accent fill. Changes with the palette so the pair stays legible. |
+| Token | Paper | Slate | Purple | Ink | Use |
+| --- | --- | --- | --- | --- | --- |
+| paper | `#F4EEE2` | `#ECEFF3` | `#F2EFF7` | `#0C1113` | Page ground. Ecru, porcelain blue, pale violet, cold ink. |
+| ink | `#1A1611` | `#0D1B2E` | `#1D1430` | `#EDE6D9` | Body and display text. |
+| muted | `#5C5245` | `#46586C` | `#55496B` | `#99A3A6` | Secondary text and metadata. |
+| rule | `#DCD2BF` | `#C9D3E0` | `#D5CDE4` | `#232C30` | Hairlines and field borders. |
+| wash | `#EDE4D3` | `#DEE5EE` | `#E6DFF2` | `#121A1D` | Margin band, inputs, status label. A tint of the ground, not a new hue. |
+| accent | `#A83E12` | `#1D4E89` | `#6B2FA0` | `#FF8C5A` | One accent per palette: primary action, current role, focus ring, link hover. |
+| on-accent | `#FFFFFF` | `#FFFFFF` | `#FFFFFF` | `#0C1113` | Label colour on an accent fill. Changes with the palette so the pair stays legible. |
 
 Measured contrast, all passing WCAG AA at 4.5:1 for body text:
 
-| Pair | Paper | Slate | Ink |
-| --- | --- | --- | --- |
-| body text on ground | 15.58 | 15.10 | 15.31 |
-| muted text on ground | 6.61 | 5.94 | 7.37 |
-| accent text on ground | 5.40 | 6.17 | 8.28 |
-| accent on wash | 4.95 | 5.76 | 7.68 |
-| label on accent fill | 6.24 | 7.21 | 8.28 |
+| Pair | Paper | Slate | Purple | Ink |
+| --- | --- | --- | --- | --- |
+| body text on ground | 15.58 | 15.01 | 15.45 | 15.31 |
+| muted text on ground | 6.61 | 6.34 | 7.24 | 7.37 |
+| accent text on ground | 5.40 | 7.27 | 7.27 | 8.28 |
+| accent on wash | 4.95 | 6.61 | 6.38 | 7.68 |
+| label on accent fill | 6.24 | 8.39 | 8.27 | 8.28 |
 
 The accent is one hue per palette and it does not appear on headings, icons, list
 markers, borders, or decorative dots. The tinted margin band is what carries colour
@@ -115,5 +115,6 @@ Deliberately excluded, with the rule that excludes each:
 | Career presented as a dated spine | Dates and employers are the strongest verifiable evidence on the page. A spine shows them at a glance. |
 | Contact form validates before opening the mail client | R-27: a control that shows no error and no success state is unfinished. |
 | No résumé preview image | Honest placeholder avoided; the PDF is the artefact, linked directly. |
-| Three palettes instead of one light/dark pair | With no photography on the page, the ground has to carry the identity. A near-white or pure black page left nothing to look at, so there are three moods of the same document: ecru paper, porcelain slate, cold ink. |
+| Three palettes instead of one light/dark pair | With no photography on the page, the ground has to carry the identity. A near-white or pure black page left nothing to look at, so there are moods of the same document: ecru paper, porcelain slate, cold ink. |
+| Slate leans neutral dark blue; a violet palette joined later (owner request) | The original slate drifted teal; it now reads as a neutral-to-dark blue with every supporting token (muted, rule, wash) tinted toward the accent hue. Purple was built from the same five-token shape, so each theme stays one hue plus neutrals. |
 | Headline wipes in once | The single entrance MOTION 2 allows. It names the focal point and the staggered rise sets reading order. Removed entirely, including the clip, under reduced motion. |

@@ -10,8 +10,8 @@
      light flash. Wrapped because Safari in private mode throws on localStorage. -->
 <script>
   (function () {
-    var ORDER = ['paper', 'slate', 'ink'];
-    var PAPER = { paper: '#F4EEE2', slate: '#E9EEF1', ink: '#0C1113' };
+    var ORDER = ['paper', 'slate', 'purple', 'ink'];
+    var PAPER = { paper: '#F4EEE2', slate: '#ECEFF3', purple: '#F2EFF7', ink: '#0C1113' };
     var saved = null, legacy = null;
     try {
       saved = localStorage.getItem('palette');
@@ -57,7 +57,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@700;800&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 
 <style>
-  /* Three palettes, each a complete scheme rather than a tint of the others.
+  /* Four palettes, each a complete scheme rather than a tint of the others.
      Every pair below is verified against WCAG AA; the measured ratios live in DESIGN.md. */
   :root, [data-theme="paper"]{
     --paper:#F4EEE2; --ink:#1A1611; --muted:#5C5245; --rule:#DCD2BF;
@@ -65,8 +65,13 @@
     color-scheme:light;
   }
   [data-theme="slate"]{
-    --paper:#E9EEF1; --ink:#0E1A22; --muted:#4A5C68; --rule:#CBD7DE;
-    --accent:#0B5C8A; --wash:#DFE7EC; --on-accent:#FFFFFF;
+    --paper:#ECEFF3; --ink:#0D1B2E; --muted:#46586C; --rule:#C9D3E0;
+    --accent:#1D4E89; --wash:#DEE5EE; --on-accent:#FFFFFF;
+    color-scheme:light;
+  }
+  [data-theme="purple"]{
+    --paper:#F2EFF7; --ink:#1D1430; --muted:#55496B; --rule:#D5CDE4;
+    --accent:#6B2FA0; --wash:#E6DFF2; --on-accent:#FFFFFF;
     color-scheme:light;
   }
   [data-theme="ink"]{
@@ -593,8 +598,8 @@
   var themeBtn = document.getElementById('themeBtn');
   var darkMQ = window.matchMedia('(prefers-color-scheme: dark)');
 
-  var PALETTE_ORDER = ['paper', 'slate', 'ink'];
-  var PALETTE_GROUND = { paper: '#F4EEE2', slate: '#E9EEF1', ink: '#0C1113' };
+  var PALETTE_ORDER = ['paper', 'slate', 'purple', 'ink'];
+  var PALETTE_GROUND = { paper: '#F4EEE2', slate: '#ECEFF3', purple: '#F2EFF7', ink: '#0C1113' };
 
   function paintTheme(t) {
     root.setAttribute('data-theme', t);
