@@ -270,6 +270,10 @@
   .repo-list{list-style:none}
   .repo-list li{display:flex; flex-wrap:wrap; align-items:baseline; gap:12px; padding:9px 0; font-size:.93rem}
   .repo-list .note{font-size:.75rem; color:var(--muted)}
+  .personal-note{font-size:.8rem; color:var(--muted); max-width:40em; margin:0 0 18px}
+  .personal-projects{list-style:none; margin:0; padding:0; display:grid; gap:20px}
+  .personal-projects h4{font-family:'Archivo',sans-serif; font-weight:700; font-size:.98rem; letter-spacing:-.01em; margin-bottom:4px}
+  .personal-projects p{max-width:40em; margin:0; font-size:.93rem}
   /* ---------- Specification rows (skills, credentials) ---------- */
   .spec{border-top:1px solid var(--rule)}
   .spec > div{display:grid; grid-template-columns:158px minmax(0,1fr); gap:22px; padding:15px 0; border-bottom:1px solid var(--rule)}
@@ -455,6 +459,37 @@
             </p>
           </div>
         </article>
+
+        <div class="more">
+          <h3>Personal projects</h3>
+          <p class="personal-note">Local and in-development work. The repositories are not public yet, so these are described rather than linked.</p>
+          <ul class="personal-projects">
+            <li>
+              <h4>QR Code and PDF Scanner App</h4>
+              <p>A Flutter app that scans QR codes and documents with the device camera and turns the scans into PDFs, using camera and storage permissions. Built for Android and iOS, with Google Play (.aab) and App Store (.ipa via Xcode) distribution as the next step.</p>
+            </li>
+            <li>
+              <h4>Self-hosted AI development and API routing</h4>
+              <p>A local development pipeline and API proxy for automated, cross-device task execution. It runs autonomous coding agents behind a hybrid routing layer that balances lightweight, cost-efficient models for routine tasks against flagship models for planning. Tooling spans Python virtual environments, VS Code with several AI coding extensions, and self-hosted model UIs.</p>
+            </li>
+            <li>
+              <h4>Unity 2D snake game</h4>
+              <p>A 2D snake game in Unity 6 LTS written in C#, built with Claude Code and the Unity MCP server. Scene construction is driven by a Bootstrap.cs entry point on a Vector2Int grid, with no singletons and domain reload disabled.</p>
+            </li>
+            <li>
+              <h4>Taskbar idle RPG</h4>
+              <p>A Godot 4 (.NET) idle RPG that runs from the system taskbar, mixing GDScript and C#. A working demo exists.</p>
+            </li>
+            <li>
+              <h4>RPG Maker MV games</h4>
+              <p>A port of an RPG Maker VX Ace game to RPG Maker MV, and an inn management simulator built in MV.</p>
+            </li>
+            <li>
+              <h4>Trading signal bot</h4>
+              <p>A Python prototype written to learn how trading bots work: asyncio with a WebSocket price feed, a multi-timeframe candle aggregator, a SQLite signal log, and an mtf_pullback strategy.</p>
+            </li>
+          </ul>
+        </div>
 
         <div class="more">
           <h3>Also public</h3>
